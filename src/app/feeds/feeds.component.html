@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="center">
+  <h1 class="title">Choose your feeds!</h1>
+  <button class="btn back btn-warning" (click)="back()">Back</button>
+<div *ngIf="feeds">
+  <ul *ngFor="let feed of feeds">
+    <li>
+      <button class="btn feed btn-outline-primary"
+              (click)="getFeedLink(feed.link)">{{feed.title}}
+      </button>
+      <button class="btn btn-danger" (click)="deleteFeed(feed)">х</button>
+    </li>
+  </ul>
+</div>
+  <button class="btn back btn-success" (click)="check()">Add feed</button>
+
+  <div *ngIf="isAdded" class="subform">
+    <form *ngIf="!isLogged"
+          #addFeedForm="ngForm"
+          (ngSubmit)="registerNewFeed(title.value, link.value)">
+      <label>Title: </label>
+      <label>
+        <input class="form-control"
+               type="text"
+               required
+               name="title"
+               #title="ngModel"
+               placeholder="Reddit"
+               ngModel>
+      </label>
+      <br>
+      <br>
+      <label>Link: </label>
+      <label>
+        <input class="form-control"
+               type="text"
+               required
+               name="link"
+               #link="ngModel"
+               placeholder="https://www.reddit.com/.rss "
+               ngModel>
+      </label>
+      <br>
+      <button class="btn submit btn-success" [disabled]="addFeedForm.invalid">Submit</button>
+    </form>
+  </div>
+  </div>
+</div>
+
+
+
+

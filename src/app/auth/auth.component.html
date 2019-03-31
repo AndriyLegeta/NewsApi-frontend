@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="subform">
+      <h2>Login form</h2>
+      <form sub #loginForm="ngForm" (ngSubmit)="sendLoginUserData(name.value, password.value)">
+        <label><span class="label-span">Name:</span></label>
+        <label>
+          <input class="form-control"
+                 type="text"
+                 required
+                 name="username"
+                 #name="ngModel"
+                 placeholder="admin"
+                 ngModel>
+        </label>
+        <br>
+        <br>
+        <label><span>Password:</span></label>
+        <label>
+          <input class="form-control"  type="password"
+                 required
+                 name="password"
+                 #password="ngModel"
+                 placeholder="admin"
+                 ngModel>
+        </label>
+        <br>
+        <button class="btn submit btn-success" [disabled]="loginForm.invalid">Sign in</button>
+      </form>
+  </div>
+</div>

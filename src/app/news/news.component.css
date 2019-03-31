@@ -1,0 +1,16 @@
+.back{
+  margin: 20px;
+}
+ul li{
+  list-style: none;
+}
+.card{
+  border: 1px solid lightgrey;
+  padding: 10px;
+  border-radius: 10px;
+}
+.time{
+  color: grey;
+  float: right;
+  margin-top: 15px;
+}

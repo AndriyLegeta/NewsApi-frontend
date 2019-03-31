@@ -1,0 +1,15 @@
+<div class="container">
+    <button class="btn back btn-warning" (click)="back()">Back</button>
+    <ul *ngFor="let n of news">
+        <li>
+          <div class="card w-75">
+            <div class="card-body">
+              <h3 [innerHTML]="n.title" class="card-title"></h3>
+              <p [innerHTML]="n.content" class="card-text"></p>
+              <a href="{{n.link}}" target="_blank" class="btn btn-primary">READ MORE</a>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
+
