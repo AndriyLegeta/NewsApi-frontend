@@ -1,6 +1,6 @@
 {
-  "name": "employee-app",
-  "version": "0.0.0",
+  "name": "News-api",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
